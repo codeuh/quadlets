@@ -1,0 +1,9 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"pwsh","name":"pwsh"}]}}
+
+#!pwsh
+
+cp ./RHEL-9/quadlets/* ~/.config/containers/systemd
+cp ./RHEL-9/units/* ~/.config/systemd/user
+systemctl --user daemon-reload

@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to pull new open-webui podman container images
+
+[Image]
+Image=ghcr.io/open-webui/open-webui:main
+
+[Service]
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target default.target
