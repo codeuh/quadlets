@@ -1,0 +1,17 @@
+[Unit]
+Description=A service to run grafana in a podman container
+Wants=network-online.target
+After=network-online.target
+
+[Container]
+ContainerName=grafana
+Image=docker.io/grafana/grafana:latest
+PublishPort=3001:3000
+Volume=grafana-storage:/var/lib/grafana
+AutoUpdate=local
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target

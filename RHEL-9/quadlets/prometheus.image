@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to pull new prometheus podman container images
+
+[Image]
+Image=docker.io/prom/prometheus:latest
+
+[Service]
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target default.target
