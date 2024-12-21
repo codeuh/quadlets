@@ -1,5 +1,5 @@
 [Unit]
-Description=neo4j-image timer to update related podman container image.
+Description=dotnet-build-image timer to update related podman container image.
 
 [Timer]
 OnCalendar=*:0/2
