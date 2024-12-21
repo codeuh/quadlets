@@ -1,7 +1,8 @@
 [Unit]
 Description=A service to run open-webui in a podman container
 Wants=network-online.target
-After=network-online.target
+After=network-online.target ollama.service
+Requires=ollama.service
 
 [Container]
 ContainerName=open-webui
