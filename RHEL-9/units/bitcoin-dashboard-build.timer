@@ -1,5 +1,5 @@
 [Unit]
-Description=bitcoin-dashbaord-build timer to build related podman container image.
+Description=bitcoin-dashboard-build timer to build related podman container image.
 
 [Timer]
 OnCalendar=daily
