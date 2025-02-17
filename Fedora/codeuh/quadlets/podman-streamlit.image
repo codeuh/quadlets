@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to pull new podman-sreamlit podman container images
+
+[Image]
+Image=ghcr.io/codeuh/podman-streamlit:main
+
+[Service]
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target default.target

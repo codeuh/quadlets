@@ -1,0 +1,9 @@
+[Unit]
+Description=bitcoin-dashboard-build timer to build related podman container image.
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=900
+
+[Install]
+WantedBy=timers.target
