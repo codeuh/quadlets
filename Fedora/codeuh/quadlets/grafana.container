@@ -1,8 +1,8 @@
 [Unit]
 Description=A service to run grafana in a podman container
 Wants=network-online.target
-After=network-online.target neo4j.service prometheus.service prometheus-podman-exporter.service
-Requires=neo4j.service prometheus.service prometheus-podman-exporter.service
+After=network-online.target prometheus.service 
+Requires=prometheus.service
 
 [Container]
 ContainerName=grafana

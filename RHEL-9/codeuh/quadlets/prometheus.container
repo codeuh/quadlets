@@ -1,0 +1,19 @@
+[Unit]
+Description=A service to run prometheus in a podman container
+Wants=network-online.target
+After=network-online.target prometheus-podman-exporter.service
+Requires=prometheus-podman-exporter.service
+
+[Container]
+ContainerName=prometheus
+Image=docker.io/prom/prometheus:latest
+PublishPort=7070:9090
+Volume=prometheus-storage:/prometheus
+Volume=/home/codeuh/dev/podmanaut/prometheus/config.yml:/etc/prometheus/prometheus.yml:Z
+AutoUpdate=local
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target

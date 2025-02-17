@@ -1,0 +1,18 @@
+[Unit]
+Description=A service to run ollama in a podman container
+Wants=network-online.target
+After=network-online.target
+
+[Container]
+ContainerName=ollama
+Image=docker.io/ollama/ollama:latest
+PodmanArgs=--gpus all
+PublishPort=11434:11434
+Volume=ollama:/root/.ollama
+AutoUpdate=local
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target
