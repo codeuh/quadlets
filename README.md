@@ -10,6 +10,14 @@ rsync -av --delete ./RHEL-9/codeuh/units/ ~/.config/systemd/user/
 systemctl --user daemon-reload
 ````
 
+## RHEL-9 root user quadlets
+
+````bash
+rsync -av --delete ./RHEL-9/root/quadlets/ /etc/containers/systemd/
+rsync -av --delete ./RHEL-9/root/units/ /etc/containers/systemd/
+sudo systemctl daemon-reload
+````
+
 ## Fedora codeuh user quadlets
 
 ````bash
