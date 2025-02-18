@@ -1,7 +1,8 @@
 [Unit]
 Description=A service to run podman-streamlit in a podman container
 Wants=network-online.target
-After=network-online.target 
+After=network-online.target podman.socket
+Requires=podman.socket
 
 [Container]
 ContainerName=podman-streamlit

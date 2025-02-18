@@ -1,6 +1,7 @@
 [Unit]
 Description=A service to run prometheus podman exporter in a podman container
-After=network.target
+After=network.target podman.socket
+Requires=podman.socket
 
 [Container]
 ContainerName=prometheus-podman-exporter
