@@ -1,0 +1,23 @@
+[Unit]
+Description=A service to run nginx in a podman container
+Wants=network-online.target
+After=network-online.target
+
+[Container]
+ContainerName=nginx
+Exec=nginx -g 'daemon off;'
+Image=docker.io/library/nginx:latest
+PublishPort=8080:8080
+PublishPort=8433:8433
+Volume=/home/codeuh/dev/nginx/default.conf:/etc/nginx/conf.d/default.conf
+Volume=/home/codeuh/dev/nginx/index.html:/usr/share/nginx/html/index.html
+Volume=/home/codeuh/dev/nginx/.htpasswd:/etc/nginx/.htpasswd
+Volume=/home/codeuh/dev/nginx/cloudflare-origin.crt:/etc/nginx/ssl/cloudflare-origin.crt
+Volume=/home/codeuh/dev/nginx/cloudflare-origin.key:/etc/nginx/ssl/cloudflare-origin.key
+AutoUpdate=local
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to pull new nginx podman container images
+
+[Image]
+Image=docker.io/library/nginx:latest
+
+[Service]
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target default.target
