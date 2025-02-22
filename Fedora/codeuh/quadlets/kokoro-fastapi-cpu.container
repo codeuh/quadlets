@@ -1,0 +1,16 @@
+[Unit]
+Description=A service to run kokoro-fastapi-cpu in a podman container
+Wants=network-online.target
+After=network-online.target
+
+[Container]
+ContainerName=kokoro-fastapi-cpu
+Image=ghcr.io/remsky/kokoro-fastapi-cpu:latest
+PublishPort=8880:8880
+AutoUpdate=local
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target

@@ -2,7 +2,7 @@
 Description=ollama-image timer to update related podman container image.
 
 [Timer]
-OnCalendar=daily
+OnCalendar=*-*-* 04:00:00
 RandomizedDelaySec=900
 
 [Install]

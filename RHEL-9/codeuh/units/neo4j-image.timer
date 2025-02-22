@@ -2,7 +2,7 @@
 Description=neo4j-image timer to update related podman container image.
 
 [Timer]
-OnCalendar=daily
+OnCalendar=*-*-* 02:00:00
 RandomizedDelaySec=900
 
 [Install]

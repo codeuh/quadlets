@@ -2,7 +2,7 @@
 Description=prometheus timer to update related podman container image.
 
 [Timer]
-OnCalendar=daily
+OnCalendar=*-*-* 05:00:00
 RandomizedDelaySec=900
 
 [Install]
