@@ -1,0 +1,9 @@
+[Unit]
+Description=rustdesk-image timer to update related podman container image.
+
+[Timer]
+OnCalendar=*:0/2
+RandomizedDelaySec=900
+
+[Install]
+WantedBy=timers.target
