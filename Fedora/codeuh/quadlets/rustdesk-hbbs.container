@@ -13,6 +13,3 @@ AutoUpdate=local
 
 [Service]
 Restart=always
-
-[Install]
-WantedBy=multi-user.target default.target
