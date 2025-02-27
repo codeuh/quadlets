@@ -7,5 +7,5 @@ Image=ghcr.io/remsky/kokoro-fastapi-gpu:latest
 [Service]
 RemainAfterExit=no
 
-[Install]
-WantedBy=multi-user.target default.target
+#[Install]
+#WantedBy=multi-user.target default.target
