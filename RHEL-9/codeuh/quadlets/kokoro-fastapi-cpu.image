@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to pull new kokoro-fastapi-cpu podman container images
+
+[Image]
+Image=ghcr.io/remsky/kokoro-fastapi-cpu:latest
+
+[Service]
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target default.target

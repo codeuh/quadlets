@@ -1,11 +1,11 @@
 [Unit]
-Description=A service to run kokoro-fastapi-gpu in a podman container
+Description=A service to run kokoro-fastapi-cpu in a podman container
 Wants=network-online.target
 After=network-online.target
 
 [Container]
-ContainerName=kokoro-fastapi-gpu
-Image=ghcr.io/remsky/kokoro-fastapi-gpu:latest
+ContainerName=kokoro-fastapi-cpu
+Image=ghcr.io/remsky/kokoro-fastapi-cpu:latest
 PodmanArgs=--gpus all
 PublishPort=8880:8880
 AutoUpdate=local
