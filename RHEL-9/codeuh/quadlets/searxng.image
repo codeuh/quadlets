@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to pull new searxng podman container images
+
+[Image]
+Image=docker.io/searxng/searxng:latest
+
+[Service]
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target default.target
