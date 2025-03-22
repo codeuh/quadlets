@@ -1,7 +1,7 @@
 [Unit]
 Description=A service to run ollama in a podman container
 Wants=network-online.target
-After=network-online.target
+After=network-online.target 
 
 [Container]
 ContainerName=ollama
@@ -13,6 +13,7 @@ AutoUpdate=local
 
 [Service]
 Restart=always
+ExecStartPre=/home/codeuh/dev/quadlets/Fedora/gpu-ready.sh
 
 [Install]
 WantedBy=multi-user.target default.target
