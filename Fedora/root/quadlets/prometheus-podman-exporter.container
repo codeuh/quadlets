@@ -11,7 +11,7 @@ Image=quay.io/navidys/prometheus-podman-exporter
 PublishPort=9882:9882
 SecurityLabelDisable=true
 User=root
-Volume=/run/user/1000/podman/podman.sock:/run/user/1000/podman/podman.sock
+Volume=/run/podman/podman.sock:/run/user/1000/podman/podman.sock
 
 [Service]
 Restart=always

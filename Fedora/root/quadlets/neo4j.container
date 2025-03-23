@@ -11,6 +11,7 @@ PublishPort=7687:7687
 Volume=neo4j-data:/data
 Volume=neo4j-logs:/logs
 Volume=/home/codeuh/dev/podmanaut/neo4j/neo4j.conf:/etc/neo4j/conf/neo4j.conf
+Volume=/home/codeuh/dev/neo4j-db-bkup:/bkup
 AutoUpdate=local
 
 [Service]
