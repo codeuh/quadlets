@@ -4,7 +4,7 @@ After=network.target podman.socket
 Requires=podman.socket
 
 [Container]
-ContainerName=prometheus-podman-exporter
+ContainerName=rampage-prometheus-podman-exporter
 Environment=CONTAINER_HOST=unix:///run/user/1000/podman/podman.sock
 Exec=--collector.enable-all
 Image=quay.io/navidys/prometheus-podman-exporter
