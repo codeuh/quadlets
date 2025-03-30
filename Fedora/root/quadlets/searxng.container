@@ -3,7 +3,7 @@ Description=A service to run searxng in a podman container
 Wants=network-online.target
 
 [Container]
-ContainerName=searxng
+ContainerName=Rampage-searxng
 Image=docker.io/searxng/searxng:latest
 PublishPort=9000:8080
 Environment=BASE_URL=http://localhost:9000

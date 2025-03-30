@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Container]
-ContainerName=kokoro-fastapi-cpu
+ContainerName=Rampage-kokoro-fastapi-cpu
 Image=ghcr.io/remsky/kokoro-fastapi-cpu:latest
 PublishPort=8880:8880
 AutoUpdate=local

@@ -5,7 +5,7 @@ After=network-online.target ollama.service
 Requires=ollama.service
 
 [Container]
-ContainerName=open-webui
+ContainerName=Rampage-open-webui
 Image=ghcr.io/open-webui/open-webui:main
 PublishPort=3000:8080
 Volume=open-webui:/app/backend/data

@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Container]
-ContainerName=prometheus
+ContainerName=Rampage-prometheus
 Image=docker.io/prom/prometheus:latest
 PublishPort=7070:9090
 Volume=prometheus-storage:/prometheus

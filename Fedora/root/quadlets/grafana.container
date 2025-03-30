@@ -5,7 +5,7 @@ After=network-online.target prometheus.service
 Requires=prometheus.service
 
 [Container]
-ContainerName=grafana
+ContainerName=Rampage-grafana
 Image=docker.io/grafana/grafana:latest
 PublishPort=3001:3000
 Volume=grafana-storage:/var/lib/grafana

@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Container]
-ContainerName=nginx
+ContainerName=Rampage-nginx
 Exec=nginx -g 'daemon off;'
 Image=docker.io/library/nginx:latest
 PublishPort=80:8080
