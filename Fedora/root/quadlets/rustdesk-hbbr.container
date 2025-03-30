@@ -1,0 +1,18 @@
+[Unit]
+Description=A service to run rustdesk hbbr in a podman container
+Wants=network-online.target
+After=network-online.target
+
+[Container]
+ContainerName=Rampage-rustdesk-hbbr
+AutoUpdate=registry
+Image=ghcr.io/rustdesk/rustdesk-server:latest
+Exec=hbbr
+Volume=rustdesk-server-data:/root
+Network=host
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

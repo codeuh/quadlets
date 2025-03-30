@@ -5,7 +5,7 @@ After=network-online.target neo4j.service
 Requires=neo4j.service
 
 [Container]
-ContainerName=Rampage-clearbitcoin-dashboard
+ContainerName=Rampage-bitcoin-dashboard
 Image=localhost/bitcoin-dashboard:latest
 PublishPort=5000:8080
 Secret=COINMARKETCAP_APIKEY,type=env
