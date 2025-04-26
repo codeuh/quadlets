@@ -1,0 +1,9 @@
+[Unit]
+Description=loki timer to update related podman container image.
+
+[Timer]
+OnCalendar=*-*-* 07:00:00
+RandomizedDelaySec=900
+
+[Install]
+WantedBy=timers.target

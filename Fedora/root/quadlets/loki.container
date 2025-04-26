@@ -1,0 +1,18 @@
+[Unit]
+Description=A service to run loki in a podman container
+Wants=network-online.target
+
+[Container]
+ContainerName=Rampage-loki
+Exec='-config.file=/mnt/config/loki-config.yaml'
+Image=docker.io/grafana/loki:latest
+PublishPort=3100:3100
+Volume=/home/codeuh/dev/podmanaut/loki:/mnt/config
+Volume=loki_data:/tmp/loki
+AutoUpdate=local
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target
