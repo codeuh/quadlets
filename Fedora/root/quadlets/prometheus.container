@@ -10,6 +10,7 @@ PublishPort=7070:9090
 Volume=prometheus-storage:/prometheus
 Volume=/home/codeuh/dev/podmanaut/prometheus/config.yml:/etc/prometheus/prometheus.yml:Z
 AutoUpdate=local
+Exec=--web.enable-remote-write-receiver --enable-feature=native-histograms --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus
 
 [Service]
 Restart=always

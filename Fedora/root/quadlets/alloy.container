@@ -7,6 +7,7 @@ ContainerName=Rampage-alloy
 Exec=run '--disable-reporting' '--server.http.listen-addr=0.0.0.0:12345' '--storage.path=/var/lib/alloy/data' /etc/alloy/config.alloy
 Image=docker.io/grafana/alloy:latest
 PublishPort=12345:12345
+PublishPort=4318:4318
 Volume=/home/codeuh/dev/podmanaut/alloy/config.alloy:/etc/alloy/config.alloy
 Volume=/var/log/:/var/log/
 Volume=/run/log/:/run/log/
