@@ -8,6 +8,7 @@ Image=docker.io/sonatype/nexus3:latest
 ContainerName=Rampage-nexus-repo-manager
 PublishPort=8081:8081
 PublishPort=8082:8082
+PublishPort=8083:8083
 Volume=nexus-data:/nexus-data:Z
 Environment=INSTALL4J_ADD_VM_PARAMS=-Xms2g -Xmx2g -XX:MaxDirectMemorySize=3g
 
