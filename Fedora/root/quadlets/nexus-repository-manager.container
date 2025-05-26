@@ -1,0 +1,22 @@
+[Unit]
+Description=Sonatype Nexus Repository Manager
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+Image=docker.io/sonatype/nexus3:latest
+ContainerName=Rampage-nexus-repo-manager
+PublishPort=8081:8081
+PublishPort=8082:8082
+Volume=nexus-data:/nexus-data:Z
+Environment=INSTALL4J_ADD_VM_PARAMS=-Xms2g -Xmx2g -XX:MaxDirectMemorySize=3g
+
+[Service]
+Restart=always
+RestartSec=10
+
+TimeoutStartSec=300
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target

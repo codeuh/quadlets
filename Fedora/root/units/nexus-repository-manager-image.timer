@@ -1,0 +1,9 @@
+[Unit]
+Description=nexus repository manager timer to update related podman container image.
+
+[Timer]
+OnCalendar=*-*-* 07:30:00
+RandomizedDelaySec=900
+
+[Install]
+WantedBy=timers.target

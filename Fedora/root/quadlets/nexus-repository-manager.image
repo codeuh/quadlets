@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to pull new nexus repository manager podman container images
+
+[Image]
+Image=docker.io/sonatype/nexus3:latest
+
+[Service]
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target default.target
