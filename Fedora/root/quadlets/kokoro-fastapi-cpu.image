@@ -1,5 +1,6 @@
 [Unit]
 Description=A service to pull new kokoro-fastapi-cpu podman container images
+Wants=network-online.target
 
 [Image]
 Image=ghcr.io/remsky/kokoro-fastapi-cpu:latest

@@ -1,5 +1,6 @@
 [Unit]
 Description=A service to pull new dotnet/aspnet:8.0 podman container images
+Wants=network-online.target
 
 [Image]
 Image=mcr.microsoft.com/dotnet/aspnet:8.0

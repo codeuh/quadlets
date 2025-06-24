@@ -1,5 +1,6 @@
 [Unit]
 Description=A service to pull new loki podman container images
+Wants=network-online.target
 
 [Image]
 Image=docker.io/grafana/loki:latest

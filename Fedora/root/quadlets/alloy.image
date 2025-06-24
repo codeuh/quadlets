@@ -1,5 +1,6 @@
 [Unit]
 Description=A service to pull new alloy podman container images
+Wants=network-online.target
 
 [Image]
 Image=docker.io/grafana/alloy:latest

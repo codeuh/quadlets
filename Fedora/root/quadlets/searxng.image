@@ -1,5 +1,6 @@
 [Unit]
 Description=A service to pull new searxng podman container images
+Wants=network-online.target
 
 [Image]
 Image=docker.io/searxng/searxng:latest

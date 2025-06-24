@@ -1,5 +1,6 @@
 [Unit]
 Description=A service to pull new podman-sreamlit podman container images
+Wants=network-online.target
 
 [Image]
 Image=ghcr.io/codeuh/podman-streamlit:main

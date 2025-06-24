@@ -1,5 +1,6 @@
 [Unit]
 Description=A service to pull new tempo podman container images
+Wants=network-online.target
 
 [Image]
 Image=docker.io/grafana/tempo:latest

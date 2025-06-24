@@ -1,5 +1,6 @@
 [Unit]
 Description=A service to pull new prometheus podman container images
+Wants=network-online.target
 
 [Image]
 Image=docker.io/prom/prometheus:latest
