@@ -1,0 +1,13 @@
+[Unit]
+Description=Generate NVIDIA CDI configuration
+Before=multi-user.target
+ConditionPathExists=/usr/bin/nvidia-ctk
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
+RemainAfterExit=yes
+User=root
+
+[Install]
+WantedBy=multi-user.target

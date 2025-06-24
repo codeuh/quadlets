@@ -1,7 +1,8 @@
 [Unit]
 Description=A service to run ollama in a podman container
 Wants=network-online.target
-After=network-online.target
+After=network-online.target nvidia-cdi-setup.service
+Requires=nvidia-cdi-setup.service
 
 [Container]
 ContainerName=TheRipper-ollama
