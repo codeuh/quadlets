@@ -9,7 +9,7 @@ ContainerName=TheRipper-podman-streamlit
 Image=ghcr.io/codeuh/podman-streamlit:main
 PublishPort=8502:8501
 AutoUpdate=local
-Volume=/run/user/1000/podman/podman.sock:/run/user/1000/podman/podman.sock
+Volume=/run/podman/podman.sock:/run/user/1000/podman/podman.sock
 
 [Service]
 Restart=always
