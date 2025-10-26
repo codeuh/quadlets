@@ -5,7 +5,7 @@ ConditionPathExists=/usr/bin/nvidia-ctk
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
+ExecStart=/usr/bin/nvidia-ctk cdi generate --mode=auto --output=/etc/cdi/nvidia.yaml
 RemainAfterExit=yes
 User=root
 
