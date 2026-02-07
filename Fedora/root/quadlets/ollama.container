@@ -14,7 +14,6 @@ AutoUpdate=local
 
 [Service]
 Restart=always
-ExecStartPre=/home/codeuh/dev/quadlets/Fedora/gpu-ready.sh
 
 [Install]
 WantedBy=multi-user.target default.target
