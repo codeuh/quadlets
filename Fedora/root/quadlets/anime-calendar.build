@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to build anime-calendar podman container image
+Wants=network-online.target
+After=network-online.target
+
+[Build]
+ImageTag=localhost/anime-calendar:latest
+SetWorkingDirectory=/home/codeuh/dev/anime-calendar/
+
+[Service]
+RemainAfterExit=no

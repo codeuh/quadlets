@@ -1,0 +1,16 @@
+[Unit]
+Description=A service to run anime-calendar in a podman container
+Wants=network-online.target
+After=network-online.target
+
+[Container]
+ContainerName=Rampage-anime-calendar
+Image=localhost/anime-calendar:latest
+PublishPort=5050:8080
+AutoUpdate=local
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target
