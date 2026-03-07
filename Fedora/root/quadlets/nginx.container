@@ -14,6 +14,8 @@ Volume=/home/codeuh/dev/nginx/Fedora/index.html:/usr/share/nginx/html/index.html
 Volume=/home/codeuh/dev/nginx/Fedora/.htpasswd:/etc/nginx/.htpasswd
 Volume=/home/codeuh/dev/nginx/Fedora/cloudflare-origin.crt:/etc/nginx/ssl/cloudflare-origin.crt
 Volume=/home/codeuh/dev/nginx/Fedora/cloudflare-origin.key:/etc/nginx/ssl/cloudflare-origin.key
+Volume=/home/codeuh/dev/nginx/Fedora/security.conf:/etc/nginx/conf.d/security.conf                                                       
+Volume=/home/codeuh/dev/nginx/Fedora/block-attackers.conf:/etc/nginx/snippets/block-attackers.conf 
 AutoUpdate=local
 
 [Service]
