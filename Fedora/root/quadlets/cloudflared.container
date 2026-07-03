@@ -2,6 +2,8 @@
 Description=A service to run the Cloudflare Tunnel (cloudflared) in a podman container
 Wants=network-online.target
 After=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=0
 
 [Container]
 ContainerName=Rampage-cloudflared
@@ -13,6 +15,7 @@ AutoUpdate=local
 
 [Service]
 Restart=always
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target default.target
