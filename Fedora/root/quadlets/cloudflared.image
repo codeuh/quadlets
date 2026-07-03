@@ -1,0 +1,12 @@
+[Unit]
+Description=A service to pull new cloudflared podman container images
+Wants=network-online.target
+
+[Image]
+Image=docker.io/cloudflare/cloudflared:latest
+
+[Service]
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target default.target

@@ -1,0 +1,18 @@
+[Unit]
+Description=A service to run the Cloudflare Tunnel (cloudflared) in a podman container
+Wants=network-online.target
+After=network-online.target
+
+[Container]
+ContainerName=Rampage-cloudflared
+Image=docker.io/cloudflare/cloudflared:latest
+Exec=tunnel --no-autoupdate run
+Network=host
+Secret=cloudflared-tunnel-token,type=env,target=TUNNEL_TOKEN
+AutoUpdate=local
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target
