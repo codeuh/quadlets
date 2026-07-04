@@ -1,0 +1,20 @@
+[Unit]
+Description=A service to run nvidia gpu exporter in a podman container
+Wants=network-online.target
+After=network-online.target nvidia-cdi-setup.service
+Requires=nvidia-cdi-setup.service
+
+[Container]
+ContainerName=Rampage-nvidia-gpu-exporter
+Image=docker.io/utkuozdemir/nvidia_gpu_exporter:latest
+PodmanArgs=--gpus all
+Environment=NVIDIA_DRIVER_CAPABILITIES=utility
+PublishPort=9835:9835
+AutoUpdate=local
+
+[Service]
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target default.target
