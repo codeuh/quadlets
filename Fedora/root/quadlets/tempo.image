@@ -1,12 +1,17 @@
 [Unit]
 Description=A service to pull new tempo podman container images
 Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=900
+StartLimitBurst=6
 
 [Image]
 Image=docker.io/grafana/tempo:latest
 
 [Service]
 RemainAfterExit=no
+Restart=on-failure
+RestartSec=30
 
 [Install]
 WantedBy=multi-user.target default.target
