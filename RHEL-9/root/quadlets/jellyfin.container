@@ -1,0 +1,25 @@
+[Unit]
+Description=A service to run jellyfin in a podman container (theripper only)
+Wants=network-online.target
+After=network-online.target nvidia-cdi-setup.service
+Requires=nvidia-cdi-setup.service
+
+[Container]
+ContainerName=Theripper-jellyfin
+Image=docker.io/jellyfin/jellyfin:latest
+PodmanArgs=--gpus all
+Environment=NVIDIA_DRIVER_CAPABILITIES=all
+PublishPort=8096:8096
+Volume=jellyfin-config:/config
+Volume=jellyfin-cache:/cache
+Volume=/home/codeuh/Videos/Anime:/media/anime:ro
+# Media lives in $HOME (user_home_t) and is also served by minidlna; don't relabel it.
+SecurityLabelDisable=true
+AutoUpdate=local
+
+[Service]
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target default.target
